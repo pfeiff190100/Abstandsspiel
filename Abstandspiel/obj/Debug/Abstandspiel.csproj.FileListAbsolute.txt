@@ -1,0 +1,6 @@
+C:\Users\stefa\source\repos\Abstandspiel\Abstandspiel\obj\Debug\Abstandspiel.csprojAssemblyReference.cache
+C:\Users\stefa\source\repos\Abstandspiel\Abstandspiel\bin\Debug\Abstandspiel.exe.config
+C:\Users\stefa\source\repos\Abstandspiel\Abstandspiel\bin\Debug\Abstandspiel.exe
+C:\Users\stefa\source\repos\Abstandspiel\Abstandspiel\bin\Debug\Abstandspiel.pdb
+C:\Users\stefa\source\repos\Abstandspiel\Abstandspiel\obj\Debug\Abstandspiel.exe
+C:\Users\stefa\source\repos\Abstandspiel\Abstandspiel\obj\Debug\Abstandspiel.pdb
