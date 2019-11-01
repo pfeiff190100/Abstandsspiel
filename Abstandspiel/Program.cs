@@ -19,19 +19,23 @@ namespace Abstandspiel
             int points_2 = 0;
             int betrag1 = 0;
             int betrag2 = 0;
+            string Spielername;
+            string name1;
+            string name2;
             Console.WriteLine("Willkommen beim Get_Closer Spiel");
             Console.WriteLine("Bei diesem gewinnt der jeweilige Spieler der Zuerst die zuvor festgelegte Zahl überschreitet");
             Console.WriteLine("Es funktioniert so indem immer eine Zufalsszahl zwischen 0 und einer festlegbaren Zahl gezogen wird, Wenn ein Spieler 20 Zahlen von der Zufallszahl entfernt ist bekommt er mehr Punkte als wenn er nur 100 Zahlen enfert ist");
             Console.WriteLine("Ja so funktioniert dieses Spiel und nun startet das Spiel wenn sie Enter drücken");
+            Console.WriteLine("moin leude trymacs hier stefan weiß nicht wies geht weil er schlecht und dumm ist und nichts kann schildkröten sind tolle tiere stefan kann das nicht obwohl er das schon voll lang macht das find ich nicht toll paul hat schlechte deutsch schularbeit geschriebne und hat jetzt eine 3");
             string x = Console.ReadLine();
 
-            while (max_punkteanzahl <400 || max_punkteanzahl < 0)
+            while (max_punkteanzahl <10 || max_punkteanzahl < 0)
             {
-                Console.WriteLine("Bitte legen sie die Punktezah fest ab der sie Gewonnen haben(minderstens 400)");
+                Console.WriteLine("Bitte legen sie die Punktezahl fest ab der sie Gewonnen haben(minderstens 400)");
                 max_punkteanzahl = Convert.ToInt32(Console.ReadLine());
-                if (max_punkteanzahl < 400 || max_punkteanzahl < 0)
+                if (max_punkteanzahl < 10 || max_punkteanzahl < 0)
                 {
-                    Console.WriteLine("Die Zahl muss größer wie 400 und darf nicht negativ sein!!!!");
+                    Console.WriteLine("Die Zahl muss größer wie 400 und darf nicht negativ sein!!!! ");
                 }
             }
 
@@ -44,26 +48,43 @@ namespace Abstandspiel
                     Console.WriteLine("Die Zahl muss größer wie 500 und darf nicht negativ sein!!!!");
                 }
             }
+            Console.WriteLine("Wollen sie den Spilern einen namen geben (y für ja und jeder andere zahl oder buchtabe für nein");
+            Spielername = Console.ReadLine();
 
-            if (points_1 >= max_punkteanzahl || points_2 >= max_punkteanzahl)
+            if (Spielername[0] == 'y')
             {
-                Console.WriteLine("Spiel ist aus");
+                Console.WriteLine("Bitte geben sie den Namen für Spieler 1 ein");
+                name1 = Console.ReadLine(); 
 
-                if (points_1 > points_2)
-                {
-                    Console.WriteLine("Spieler 1 hat gewonnen");
-                }
-                if (points_1 < points_2)
-                {
-                    Console.WriteLine("Spieler 2 hat gewonnen");
-                }
             }
 
 
 
-                while (points_1 <= max_punkteanzahl || points_2 <= max_punkteanzahl)
+
+            while (true)
 
             {
+                if (points_1 >= max_punkteanzahl || points_2 >= max_punkteanzahl)
+                {
+
+                    Console.WriteLine("Spiel ist aus");
+                    if (points_1 > points_2)
+                    {
+                        Console.WriteLine("Spieler 1 hat gewonnen");
+                        break;
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("Spieler 2 hat gewonnen");
+                        break;
+
+                    }
+
+                }
+
+
+
                 Int32 zufalls_zahl = rnd.Next(0, max_zufallszahl);
 
                     Console.WriteLine("Die Punktezahl des ersten Spielers beträgt {0} von {1}", points_1, max_punkteanzahl);
@@ -82,8 +103,8 @@ namespace Abstandspiel
                         quess1 = Convert.ToInt32(Console.ReadLine());
 
                 }
-               
-                                   
+                    
+                                                     
                 
                     Console.WriteLine("Spieler 2 soll bitte seinen Tipp eingeben (Sie muss zwischen 0 und der maximalen zufallszahl liegen)");
                     quess2 = Convert.ToInt32(Console.ReadLine());
@@ -94,7 +115,10 @@ namespace Abstandspiel
                         quess2 = Convert.ToInt32(Console.ReadLine());
                     }
                 Console.WriteLine("");
+             
                 Console.WriteLine("Die zufallszahl die gezogen wurde beträgt {0}", zufalls_zahl);
+                
+
 
                 if (quess1 > zufalls_zahl)
                 {
